@@ -15,6 +15,126 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+
+    <!-- banner slider -->
+    <section class="banner--slider-section">
+        <div class="main--container">
+            <div class="banner--slider--wrapper">
+                <div class="banner--slider">
+                    <div class="slider--content--wrapper">
+                        <div class="slider--content--inner">
+                            <div class="slider--thumbnail">
+                                <a href="#">
+                                    <img src="assets/Images/banner--slider-img.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="slider--content">
+                                <div class="post-cat-list">
+                                    <a class="hover-flip-item-wrapper" href="#" tabindex="0">
+                                    <span class="hover-flip-item"><span data-hover="Innovation">Innovation</span></span>
+                                    </a>  
+                                </div>
+                                <div class="slider--main--title">
+                                    <h4>
+                                        <a href="#" tabindex="0">iPadOS 14 introduces new designed specifically for iPad</a>
+                                    </h4>
+                                </div>
+                                <div class="tab--hover--meta">
+                                    <div class="post--meta--data">
+                                        <div class="post--meta--avtaar">
+                                            <img src="assets/Images/hover--img2.jpg" alt="">
+                                        </div>
+                                        <div class="post--meta--content">
+                                            <h5 class="post--meta--author">
+                                                <div class="post-cat-list">
+                                                    <a class="hover-flip-item-wrapper" href="#" tabindex="0">
+                                                    <span class="hover-flip-item"><span data-hover="Innovation">Innovation</span></span>
+                                                    </a>                 
+                                                </div>
+                                            </h5>
+                                            <ul class="post--meta--list">
+                                                <li class="post--meta--date">January 24, 2021</li>
+                                                <li class="post--meta--time">4 min read</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="social--data">
+                                        <ul>
+                                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa-solid fa-link"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="read--post--btn">
+                                        <a href="#">
+                                            <span class="hover-flip-item"><span data-hover="Read Post">Read Post</span></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider--content--wrapper">
+                        <div class="slider--content--inner">
+                            <div class="slider--thumbnail">
+                                <a href="#">
+                                    <img src="assets/Images/banner--slider-img2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="slider--content">
+                                <div class="post-cat-list">
+                                    <a class="hover-flip-item-wrapper" href="#" tabindex="0">
+                                    <span class="hover-flip-item"><span data-hover="Innovation">Innovation</span></span>
+                                    </a>  
+                                </div>
+                                <div class="slider--main--title">
+                                    <h4>
+                                        <a href="#" tabindex="0">These 5 tips will help you nail your next design presentation </a>
+                                    </h4>
+                                </div>
+                                <div class="tab--hover--meta">
+                                    <div class="post--meta--data">
+                                        <div class="post--meta--avtaar">
+                                            <img src="assets/Images/hover--img2.jpg" alt="">
+                                        </div>
+                                        <div class="post--meta--content">
+                                            <h5 class="post--meta--author">
+                                                <div class="post-cat-list">
+                                                    <a class="hover-flip-item-wrapper" href="#" tabindex="0">
+                                                    <span class="hover-flip-item"><span data-hover="Innovation">Innovation</span></span>
+                                                    </a>                 
+                                                </div>
+                                            </h5>
+                                            <ul class="post--meta--list">
+                                                <li class="post--meta--date">January 24, 2021</li>
+                                                <li class="post--meta--time">4 min read</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="social--data">
+                                        <ul>
+                                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa-solid fa-link"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="read--post--btn">
+                                        <a href="#">
+                                            <span class="hover-flip-item"><span data-hover="Read Post">Read Post</span></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner slider end -->
+
     <!-- tab Section -->
     <section class="tab--slider">
         <div class="main--container">
@@ -1266,6 +1386,43 @@
                     breakpoint: 991,
                     settings: {
                         slidesToShow: 2,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                    }
+                    },
+                    
+                    {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+                });
+
+
+                // banner slider
+
+                $('.banner--slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear',
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow:"<button type='button' class='slick-prev'><i class='fa-solid fa-arrow-left'></i></button>",
+                nextArrow:"<button type='button' class='slick-next'><i class='fa-solid fa-arrow-right'></i></button>",
+                responsive: [
+                    {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 1,
                         slidesToScroll: 1,
                         infinite: true,
                         dots: true

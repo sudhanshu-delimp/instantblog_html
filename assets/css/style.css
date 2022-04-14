@@ -8,7 +8,6 @@ body, html {
 
 .main--container {
     max-width: 1260px;
-    padding: 15px;
     width: 100%;
     margin: 0 auto;
 }
@@ -65,7 +64,7 @@ a {
 .slider-contant .slider--main--title {
     padding-bottom: 50px;
 }
-.slider-contant .slider--main--title h4 a {
+.slider-contant .slider--main--title h4 a , .slider--content .slider--main--title h4 a {
     position: relative;
     display: inline;
     background-image: -webkit-gradient(linear, left top, right top, from(currentColor), to(currentColor));
@@ -85,7 +84,7 @@ a {
 .slider-contant .slider--main--title h4 a:hover {
     color: inherit;
 }
-.slider-contant--main:hover .slider--main--title h4 a {
+.slider-contant--main:hover .slider--main--title h4 a, .slider--content--inner:hover .slider--main--title h4 a {
     background-size: 100% 2px;
 }
 .slider-contant--main {
@@ -242,7 +241,7 @@ a {
     color: #3858f6;
     transition: all 0.5s;
   }
-.post-cat-list a:hover .hover-flip-item span {
+.post-cat-list a:hover .hover-flip-item span, .read--post--btn a:hover .hover-flip-item span {
     transform: translateY(-18px);
 }
 
@@ -274,6 +273,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 .post--meta--list {
     display: flex;
@@ -288,6 +288,7 @@ a {
 }
 .post--meta--author {
     margin: 6px 0 0;
+    font-weight: 500;
 }
 .tab--hover--data .tab--hover--meta .post--meta--author .hover-flip-item span  {
     font-size: 17px ;
@@ -371,12 +372,142 @@ a {
 }
 .most--populer .main--container {
     width: auto;
+    padding: 0 15px;
 }
 .tab--hover-section {
     display: none;
 }
+.tab--hover-section .post--meta--list {
+    margin: 7px 0;
+}
+
 /* tab hover section end */
+
+/* banner slider */
+.banner--slider-section {
+    background-color: #f0f2f5;
+    padding:  1rem 0 5rem;
+}
+.banner--slider .slider--content--inner .slider--thumbnail img {
+    width: 100%;
+    border-radius: 10px;
+    height: 700px;
+    object-fit: cover;
+    object-position: top;
+}
+.slider--content--inner {
+    position: relative;
+    padding-bottom: 100px;
+}
+.slider--content--inner .slider--content {
+    position: absolute;
+    background: #fff;
+    width: 570px;
+    padding: 40px 42px;
+    border-radius: 10px;
+    right: 100px;
+    bottom: 0;
+    padding-right: 58px;
+}
+.slider--content--inner .slider--content .slider--main--title h4 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 25px 0 35px;
+}
+.slider--content--inner .post--meta--data {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.slider--content--inner .post--meta--avtaar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+.slider--content--inner .post--meta--list {
+    margin: 5px 0;
+}
+.read--post--btn a {
+    background: #3858f6;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    display: inline-block;
+    border: 2px solid transparent;
+    padding: 13px 30px 10px;
+    height: auto;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+.read--post--btn a:hover {
+    background-color: transparent;
+    border: 2px solid #3858f6;
+}
+.slider--content--inner .read--post--btn {
+    position: absolute;
+    right: -100px;
+    top: 0;
+}
+.slider--content--inner .social--data {
+    margin-right: 65px;
+}
+.banner--slider .slick-prev {
+    left: 90px !important;
+    bottom: 0px;
+    top: auto;
+}
+.banner--slider .slick-next {
+    right: auto;
+    top: auto;
+    bottom: 0;
+    left: 160px;
+}
+.banner--slider .slick-prev,  .banner--slider .slick-next {
+    opacity: 1;
+}
+.banner--slider .slick-slider:hover .slick-prev {
+    left: 90px;
+}
+.banner--slider .slick-slider:hover .slick-next {
+    left: 160px;
+}
+.slider--content--inner .slider--content > .post-cat-list a {
+    color: #d93e40;
+}
+/* .read--post--btn .hover-flip-item span:before {
+    color: #fff;
+} */
+/* banner slider end */
+
+
 /* responsive */
+
+@media (min-width:768px) and (max-width:1024px) {
+    .banner--slider .slider--content--inner .slider--thumbnail img {
+        height: 450px;
+    }
+    .slider--content--inner .slider--content {
+        width: 450px;
+        right: 40px;
+    }
+    .banner--slider .slick-prev {
+        left: 15px !important;
+    }
+    .banner--slider .slick-next {
+        left: 80px;
+    }
+    .banner--slider-section {
+        padding-bottom: 2rem;
+    }
+    .tab--slider {
+        padding: 50px 0;
+    }
+    .most--populer {
+        padding-bottom: 3rem;
+    }
+}
 @media (max-width:767px) {
     .tab--titles ul li a {
         padding: 0px 9px;
@@ -430,5 +561,62 @@ a {
       .slick-prev i, .slick-next i {
           font-size: 16px;
       }
+      .slider--content--inner .slider--content {
+        width: calc(100% - 60px);
+        position: static;
+        border-radius: 0 0 10px 10px;
+        padding: 30px;
+      }
+      .slider--content--inner .tab--hover--meta {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+      .slider--content--inner .social--data {
+        margin-right: 0px;
+    }
+    .slider--content--inner .read--post--btn {
+        position: static;
+        flex-basis: 100%;
+    }
+    .slider--content--inner .slider--content .slider--main--title h4 {
+        font-size: 21px;
+    }
+    .banner--slider .slider--content--inner .slider--thumbnail img {
+        border-radius: 10px 10px 0 0;
+    }
+    .banner--slider .slider--content--inner .slider--thumbnail img {
+        height: 230px;
+    }
+    .slider--content--inner .slider--content .slider--main--title h4 {
+        margin: 20px 0 25px;
+    }
+    .banner--slider .slick-next {
+        bottom: 15px;
+        left: 70px;
+    }
+    .banner--slider .slick-prev {
+        left: 15px !important;
+        bottom: 15px;
+        
+    }
+    .banner--slider-section {
+        padding-bottom: 0.5rem;
+    }
+    .tab--slider {
+        padding: 30px 0 0;
+    }
+    .most--populer {
+        padding-bottom: 1rem;
+    }
+    .main--title h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width:500px) {
+    .tab--hover-section .tab--hover--meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 /* responsive end */
